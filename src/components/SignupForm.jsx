@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import "./SIgnupForm.css";
 const SignupForm = () => {
+  // tương tự như tạo useState
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -49,6 +50,7 @@ const SignupForm = () => {
 
   return (
     <section>
+      <h1>Emmmmmmmmmm</h1>
       <form className="infoform" onSubmit={formik.handleSubmit}>
         <label>Name:</label>
         <input
@@ -74,7 +76,7 @@ const SignupForm = () => {
         )}
         <label>Password:</label>
         <input
-          type="text"
+          type="password"
           id="password"
           name="password"
           value={formik.values.password}
@@ -86,7 +88,7 @@ const SignupForm = () => {
         )}
         <label>Confirmed Password:</label>
         <input
-          type="text"
+          type="password"
           id="confirmedPassword"
           name="confirmedPassword"
           value={formik.values.confirmedPassword}
